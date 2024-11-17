@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open World Game</title>
+  <style>
+    canvas {
+      display: block;
+      margin: auto;
+      border: 2px solid black;
+    }
+    body {
+      background-color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Open World Game</h1>
+  <p>Use WASD or Arrow Keys to move the player. Interact with the NPC to complete the mission!</p>
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+  <script>
+    // Initialize Canvas
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Game Settings
+    const tileSize = 40;
+    const worldWidth = 20;
+    const worldHeight = 15;
+    const player = { x: 5, y: 5, size: tileSize, color: 'blue' };
+    const npc = { x: 10, y: 7, size: tileSize, color: 'green', message: "Mission Complete!" };
+    let missionComplete = false;
+
+    // Draw World
+   
